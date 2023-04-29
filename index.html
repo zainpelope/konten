@@ -1,63 +1,91 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Konten Bucin hahahahh</title>
-    <style>
-      body {
-        background-color: pink;
-      }
-      .kalimat {
-        font-family: Arial, sans-serif;
-        font-size: 24px;
-        color: white;
-        text-align: center;
-        margin-top: 100px;
-        display: none;
-      }
-      #kalimat-1 {
-        display: block;
-      }
-      img {
-        width: 200px;
-        height: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        animation: rotate 2s linear infinite;
-      }
-      @keyframes rotate {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="kalimat-1" class="kalimat">Aku mencintaimu lebih dari apapun di dunia ini.</div>
-    <div id="kalimat-2" class="kalimat">Ketika aku bersamamu, aku merasa dunia ini menjadi lebih indah.</div>
-    <div id="kalimat-3" class="kalimat">Kamu adalah orang yang membuatku merasa lengkap.</div>
-    <div id="kalimat-4" class="kalimat">Aku bersyukur setiap saat bisa memiliki kamu di hidupku.</div>
-    <img src="love.gif" alt="animasi love" />
-    <script>
-      const kalimat = document.querySelectorAll(".kalimat");
-      let index = 0;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucin hahaha</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #FEB692 0%, #EA5455 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
 
-      function tampilkanKalimat() {
-        kalimat[index].style.display = "none";
-        index = (index + 1) % kalimat.length;
-        kalimat[index].style.display = "block";
+    #chat-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #chat {
+      margin-top: 30px;
+      font-size: 24px;
+      text-align: center;
+      color: white;
+    }
+
+    #image {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body onclick="nextChat()">
+  <div id="chat-container">
+    <img id="image" src="kodok.gif">
+    <div id="chat">Mun Terro Taoah Essenah Pecek Edinak hahahahah</div>
+  </div>
+
+  <script>
+    let index = 0;
+    let chatElement = document.getElementById("chat");
+    let imageElement = document.getElementById("image");
+
+    function nextChat() {
+      index++;
+      if (index > 6) {
+        index = 1;
       }
 
-      document.addEventListener("DOMContentLoaded", function () {
-        tampilkanKalimat();
+      let chatText;
+      let imagePath;
 
-        document.addEventListener("click", function () {
-          tampilkanKalimat();
-        });
-      });
-    </script>
-  </body>
+      switch (index) {
+        case 1:
+          chatText = "Maafkan aku, sayang.";
+          imagePath = "Gambar1.gif";
+          break;
+        case 2:
+          chatText = "Mari kita bicara dan selesaikan masalah ini.";
+          imagePath = "Gambar2.gif";
+          break;
+        case 3:
+          chatText = "Aku salah; Maafkan aku!";
+          imagePath = "Gambar3.gif";
+          break;
+        case 4:
+          chatText = "Aku menyadari apa yang telah aku lakukan, dan aku minta maaf!";
+          imagePath = "Gambar4.gif";
+          break;
+        case 5:
+          chatText = "Berhentilah marah kepadaku! Kau tahu aku mencintaimu, kan?";
+          imagePath = "Gambar5.gif";
+          break;
+        case 6:
+          chatText = "Kamu terlihat sangat imut saat kamu marah.";
+          imagePath = "Gambar6.gif";
+          break;
+      }
+
+      chatElement.innerText = chatText;
+      imageElement.src = imagePath;
+    }
+  </script>
+</body>
 </html>
