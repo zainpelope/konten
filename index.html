@@ -1,91 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bucin hahaha</title>
-  <style>
-    body {
-      background: linear-gradient(135deg, #FEB692 0%, #EA5455 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: sans-serif;
-      cursor: pointer;
-    }
-
-    #chat-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #chat {
-      margin-top: 30px;
-      font-size: 24px;
-      text-align: center;
-      color: white;
-    }
-
-    #image {
-      width: 200px;
-      height: 200px;
-      object-fit: contain;
-    }
-  </style>
+	<title>Contoh Web</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body onclick="nextChat()">
-  <div id="chat-container">
-    <img id="image" src="kodok.gif">
-    <div id="chat">Mun Terro Taoah Essenah Pecek Edinak hahahahah</div>
-  </div>
+<body>
+	<div class="container">
+		<h1 id="kalimat">Apa Kabar</h1>
+		<img id="gambar" src="1.gif">
+		<audio id="audio" src="sedih.mpeg"></audio>
+	</div>
 
-  <script>
-    let index = 0;
-    let chatElement = document.getElementById("chat");
-    let imageElement = document.getElementById("image");
-
-    function nextChat() {
-      index++;
-      if (index > 6) {
-        index = 1;
-      }
-
-      let chatText;
-      let imagePath;
-
-      switch (index) {
-        case 1:
-          chatText = "Maafkan aku, sayang.";
-          imagePath = "Gambar1.gif";
-          break;
-        case 2:
-          chatText = "Mari kita bicara dan selesaikan masalah ini.";
-          imagePath = "Gambar2.gif";
-          break;
-        case 3:
-          chatText = "Aku salah; Maafkan aku!";
-          imagePath = "Gambar3.gif";
-          break;
-        case 4:
-          chatText = "Aku menyadari apa yang telah aku lakukan, dan aku minta maaf!";
-          imagePath = "Gambar4.gif";
-          break;
-        case 5:
-          chatText = "Berhentilah marah kepadaku! Kau tahu aku mencintaimu, kan?";
-          imagePath = "Gambar5.gif";
-          break;
-        case 6:
-          chatText = "Kamu terlihat sangat imut saat kamu marah.";
-          imagePath = "Gambar6.gif";
-          break;
-      }
-
-      chatElement.innerText = chatText;
-      imageElement.src = imagePath;
-    }
-  </script>
+	<script src="script.js"></script>
 </body>
 </html>
