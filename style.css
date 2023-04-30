@@ -7,8 +7,10 @@ body {
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
+    position: relative;
 }
 
 .content {
@@ -18,11 +20,15 @@ body {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 40px;
+    position: relative;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-height: 50vh;
 }
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 
 #kalimat {
   font-family: 'Rock Salt', cursive;
@@ -30,10 +36,11 @@ img {
   font-weight: bold;
   font-style: italic;
   text-align: center;
-  margin: 20;
-  padding: 40px;
+  padding-left: 10px;
+  padding-right: 25px;
+margin-top: 30%;
   color: white;
-  background-image: url('https://cdn.jsdelivr.net/gh/afeld/bg-patterns/src/blood.gif');
+
   background-repeat: repeat;
   border: 5px solid white;
   border-radius: 10px;
@@ -44,7 +51,10 @@ img {
 
 @media only screen and (max-width: 768px) {
     #kalimat {
-        font-size: 36px;
+        font-size: 40px;
         padding: 20px;
     }
 }
+
+
+
