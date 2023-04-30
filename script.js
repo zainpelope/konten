@@ -1,5 +1,5 @@
 const kalimat = [
-    "&ldquo; Aduh Maaf &rdquo;",
+    "&ldquo; Aduh Maaf  &rdquo;",
     "&ldquo; Hi Apa Kabar &rdquo;",
     "&ldquo; Di sini awal kita bertemu &rdquo;",
     "&ldquo; Seiring berjalannya waktu &rdquo;",
